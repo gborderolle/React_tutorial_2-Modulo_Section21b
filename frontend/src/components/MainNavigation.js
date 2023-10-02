@@ -8,10 +8,21 @@ function MainNavigation() {
       <nav>
         <ul className={classes.list}>
           <li>
-            <Link to='/'>Home</Link>
+            <Link
+              to='/'
+              className={({ isActive }) => isActive && classes.active}
+              end
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <Link to='/events'>Eventos</Link>
+            <Link
+              to='/events'
+              className={({ isActive }) => isActive && classes.active}
+            >
+              Eventos
+            </Link>
           </li>
         </ul>
       </nav>
